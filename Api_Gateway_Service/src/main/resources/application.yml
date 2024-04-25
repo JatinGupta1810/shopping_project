@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: Api_Gateway_Service
+  cloud:
+    gateway:
+      routes:
+        - id: LOGIN-SERVICE
+          predicates:
+            - Path=/login/**
+          uri: lb://LOGIN-SERVICE
+          filters:
+           - AuthenticationFilter
+  main:
+    web-application-type: reactive
