@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Profile-Service
+    
+  datasource:
+    url: jdbc:mysql:///shopping_profile
+    username: root
+    password: 66Ja3766
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8020
