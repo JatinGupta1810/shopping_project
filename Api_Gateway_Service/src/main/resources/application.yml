@@ -13,5 +13,12 @@ spring:
           uri: lb://LOGIN-SERVICE
           filters:
            - AuthenticationFilter
+           
+        - id: PROFILE-SERVICE
+          predicates:
+            - Path=/profile/**
+          uri: lb://PROFILE-SERVICE
+          filters:
+           - AuthenticationFilter
   main:
     web-application-type: reactive
